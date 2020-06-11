@@ -8,6 +8,7 @@ echo "Cloning homeshick repos..."
 
 homeshick_repos=(
     "goude/adages"
+    "goude/runcom2"
 )
 
 for i in "${homeshick_repos[@]}"

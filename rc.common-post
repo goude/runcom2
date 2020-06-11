@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+
+# OS specific settings
+if [[ $system == 'Linux' ]]; then
+  alias ls='ls -hpF --color=auto'
+  alias rm='rm -I'
+  alias grep='grep --color=auto'
+  alias egrep='egrep --color=auto'
+  alias open='xdg-open'
+
+  if [[ -n "$DISPLAY" ]]; then
+      # Map caps lock key to ctrl
+      setxkbmap eu -option ctrl:nocaps
+  fi
+fi
+
+if [[ $system == 'OSX' ]]; then
+  export CLICOLOR=1
+
+  if [[ -x /usr/local/bin/gls ]]; then
+      alias ls='/usr/local/bin/gls -hpF --color=auto'
+  else
+      alias ls='ls -hG'
+  fi
+fi
+
+# Directory colors
+if [[ -f ~/.dircolors && ( -x /usr/local/bin/dircolors || -x /usr/bin/dircolors ) ]]; then
+  eval `dircolors $HOME/.dircolors`
+fi
+if [[ -f ~/.dircolors && ( -x /usr/local/bin/gdircolors ) ]]; then
+  eval `gdircolors $HOME/.dircolors`
+fi
+
+# Source custom functions, including `command_exists` which is used below.
+. "$rcfiles/functions"
+
+# Replacement commands
+# Use bat if available
+#command_exists bat && alias cat='bat'
+if command_exists bat; then
+  alias cat='bat'
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
+
+# Use exa/colorls if available
+#if [[ -f ~/.cargo/bin/exa ]]; then
+if command_exists exa; then
+  alias ls='exa --color-scale'
+  alias l='ls --all'
+  alias ll='ls --all --long --header --git'
+  alias lt='ls --all --long --tree'
+elif [[ -f ~/.rbenv/shims/colorls ]]; then
+  alias ls='colorls'
+  alias l='colorls -A'
+  alias ll='colorls -A -l'
+  alias lt='colorls --tree'
+  source "$(dirname $(gem which colorls))/tab_complete.sh"
+else
+  alias l='ls -A --color'
+  alias ll='ls -lAh --color'
+  alias lt='tree'
+  alias lsa='ls -lAh --color'
+fi
+
+# fasd navigator
+eval "$(fasd --init auto)"
+
+# nvm (slow loading)
+if [[ "${IS_PRUNCOM}" = 1 ]]; then
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+else
+  # TODO: temporary disabling
+  #alias nvm='[ -s "$NVM_DIR/nvm.sh" ] && unalias nvm && . "$NVM_DIR/nvm.sh" && nvm $@'
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fi
+
+# Custom aliases
+. "$rcfiles/aliases"
+
+# Alias to fix typos
+if [[ -x /usr/bin/thefuck ]]; then
+  eval "$(thefuck --alias)"
+fi
+
+# Cleanup
+unset rcfiles
+unset system
+
+# Source additional local settings
+if [ -f ~/.localenv-post ]; then
+  . ~/.localenv-post
+fi
+
+# Source optional additional settings
+if [[ -f $HOMESHICK_REPOS/pruncom/rc.pruncom-post ]]; then
+  . "$HOMESHICK_REPOS/pruncom/rc.pruncom-post"
+fi
