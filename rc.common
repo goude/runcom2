@@ -43,8 +43,8 @@ if [ -f ~/.localenv ]; then
 fi
 
 # Create tmp dir
-if [[ ! -d $RUNCOM_TMPDIR ]]; then
-	mkdir -p $RUNCOM_TMPDIR
+if [[ ! -d $RUNCOM2_TMPDIR ]]; then
+	mkdir -p $RUNCOM2_TMPDIR
 fi
 
 # Source optional additional settings
