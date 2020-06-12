@@ -9,7 +9,7 @@ if [[ $system == 'Linux' ]]; then
   alias open='xdg-open'
 
   if [[ -n "$DISPLAY" ]]; then
-      # Map caps lock key to ctrl
+      # Map caps lock key to ctrl / set eurkey keymap
       setxkbmap eu -option ctrl:nocaps
   fi
 fi
@@ -43,19 +43,13 @@ if command_exists bat; then
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
-# Use exa/colorls if available
+# Use exa if available
 #if [[ -f ~/.cargo/bin/exa ]]; then
 if command_exists exa; then
   alias ls='exa --color-scale'
   alias l='ls --all'
   alias ll='ls --all --long --header --git'
   alias lt='ls --all --long --tree'
-elif [[ -f ~/.rbenv/shims/colorls ]]; then
-  alias ls='colorls'
-  alias l='colorls -A'
-  alias ll='colorls -A -l'
-  alias lt='colorls --tree'
-  source "$(dirname $(gem which colorls))/tab_complete.sh"
 else
   alias l='ls -A --color'
   alias ll='ls -lAh --color'
@@ -75,6 +69,15 @@ else
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 fi
 
+# Turn off Ctrl-s XOFF, so we can use C-S mapping in vim
+# Commented out pending further investigation (x key stopped working)
+# http://unix.stackexchange.com/questions/72086/ctrl-s-hang-terminal-emulator
+#stty ixon
+stty ixany
+stty ixoff -ixon
+stty stop undef
+stty start undef
+# End magic mumbo jumbo block
 # Custom aliases
 . "$rcfiles/aliases"
 
