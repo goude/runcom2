@@ -10,7 +10,7 @@ source $HOME/.homesick/repos/runcom2/rc.common
 
 #source $rcfiles/utils/git-completion.bash
 #source $rcfiles/utils/git-prompt.sh
-#source $rcfiles/utils/bash_colors
+source $rcfiles/utils/bash_colors
 
 source $rcfiles/rc.common-post
 
@@ -18,11 +18,11 @@ source $rcfiles/rc.common-post
 
 # Define prompt
 bpr="$RUNCOM_ICON "
-bpr+="\[$IRed\]\u\[$CReset\]"
-bpr+="\[$White\]@\[$CReset\]"
-bpr+="\[$Yellow\]\h\[$CReset\]"
+#bpr+="\[$IRed\]\u\[$CReset\]"
+#bpr+="\[$White\]@\[$CReset\]"
+#bpr+="\[$Yellow\]\h\[$CReset\]"
 bpr+=" \[$IBlack\]\W\[$CReset\]"
-bpr+=" \[$IBlack\]λ\[$CReset\] "
+bpr+=" \[$IBlack\]>\[$CReset\] "
 export PS1=$bpr
 unset bpr
 
