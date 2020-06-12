@@ -17,12 +17,12 @@ source $rcfiles/rc.common-post
 #source $HOME/.homesick/repos/runcom/utils/fix_alias_completion.bash
 
 # Define prompt
-bpr="$RUNCOM2_ICON "
+#bpr="$RUNCOM2_ICON"
 #bpr+="\[$IRed\]\u\[$CReset\]"
 #bpr+="\[$White\]@\[$CReset\]"
 #bpr+="\[$Yellow\]\h\[$CReset\]"
-bpr+=" \[$IBlack\]\W\[$CReset\]"
-bpr+=" \[$IBlack\]>\[$CReset\] "
+#bpr+=" \[$IBlack\]\W\[$CReset\]"
+bpr+="\[$IBlack\]\[$CReset\] "
 export PS1=$bpr
 unset bpr
 
