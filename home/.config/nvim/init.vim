@@ -59,6 +59,8 @@ if filereadable(expand("~/.config/nvim/mappings.vim"))
 endif
 " }
 
+colorscheme gruvbox
+
 " Mappings - leader/function keys {
 
 " Edit init.vim
@@ -300,11 +302,11 @@ endif
 " }
 
 " Base16 {
-let g:base16_shell_path = '~/.local/share/base16/templates/shell/scripts'
-if filereadable(expand('~/.vimrc_background'))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+"let g:base16_shell_path = '~/.local/share/base16/templates/shell/scripts'
+"if filereadable(expand('~/.vimrc_background'))
+  "let base16colorspace=256
+  "source ~/.vimrc_background
+"endif
 " }
 
 " ALE {
@@ -348,7 +350,6 @@ endfunction
 set noshowmode " disabled, since it's displayed by lightline
 
 let g:lightline = {
-      \ 'colorscheme': 'base16',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste'],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'workdir', 'gutentag' ] ],

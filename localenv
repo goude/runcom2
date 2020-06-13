@@ -10,4 +10,4 @@ export RUNCOM2_TMPDIR=$HOME/tmp
 #export RUNCOM_PIPENV_CMD=$HOME/.local/bin/pipenv
 export RUNCOM2_PIPENV_CMD=$HOME/bin/pipenv
 export RUNCOM2_PYTHON3=$HOME/.pyenv/versions/neovim3/bin/python3
-#export RUNCOM2_NVM_NODE_VERSION=10
+export RUNCOM2_NVM_NODE_VERSION=14
