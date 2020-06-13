@@ -11,12 +11,12 @@ source $HOME/.homesick/repos/runcom2/rc.common
 #source $rcfiles/utils/git-prompt.sh
 source $HOMESHICK_REPOS/homeshick/completions/homeshick-completion.bash
 
-source $rcfiles/utils/bash_colors
+source $RUNCOM2_PATH/utils/bash_colors
 
-source $rcfiles/rc.common-post
+source $RUNCOM2_PATH/rc.common-post
 
 # Workarounds
-source $HOME/.homesick/repos/runcom/utils/fix_alias_completion.bash
+source $RUNCOM2_PATH/utils/fix_alias_completion.bash
 
 # Define prompt
 #bpr="$RUNCOM2_ICON"
