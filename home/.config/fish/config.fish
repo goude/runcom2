@@ -13,5 +13,3 @@ source $HOMESHICK_REPOS/homeshick/homeshick.fish
 source $HOMESHICK_REPOS/homeshick/completions/homeshick.fish
 
 source $RUNCOM2_PATH/aliases
-
-

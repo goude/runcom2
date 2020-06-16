@@ -1,16 +1,7 @@
 #!/usr/bin/env bash
 source $HOME/.homesick/repos/runcom2/rc.common
 
-#GIT_PS1_SHOWDIRTYSTATE=1
-#GIT_PS1_SHOWSTASHSTATE=1
-#GIT_PS1_SHOWUNTRACKEDFILES=1
-#GIT_PS1_SHOWCOLORHINTS=1
-
-# Bash autocompletion
-#source $rcfiles/utils/git-completion.bash
-#source $rcfiles/utils/git-prompt.sh
 source $HOMESHICK_REPOS/homeshick/completions/homeshick-completion.bash
-
 source $RUNCOM2_PATH/utils/bash_colors
 
 source $RUNCOM2_PATH/rc.common-post

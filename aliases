@@ -29,6 +29,11 @@ alias ....='cd ../../..'
 # short form aliases - watch out for collisions with existing commands
 alias h='history'
 alias s='ssh'
+alias n='nvim'
+
+# grepping aliases
+alias esi='env | grep -i $1'
+alias hsi='history | grep -i $1'
 
 # misc aliases
 alias clp='tmux split-window && exit'

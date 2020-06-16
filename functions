@@ -57,13 +57,13 @@ function center-text() {
 }
 
 # Neovim launcher
-n() {
-  if command_exists nvim; then
-    nvim "$@"
-  else
-    echo "nvim is not installed."
-  fi
-}
+#n() {
+  #if command_exists nvim; then
+    #nvim "$@"
+  #else
+    #echo "nvim is not installed."
+  #fi
+#}
 
 nerdfont_icon_search() {
   cat $RUNCOM2_PATH/utils/nerd-fonts-scripts/*.sh | sed "s/i=//" | sed "s/=\$i//" | grep -E "^'" | sed "s/'//g" | sort --random-sort | fzf | perl -ne 'print $1 if /^([^ ]+) /' # | xsel --input
@@ -72,10 +72,11 @@ nerdfont_icon_search() {
 function emoji_search() {
   emojify -l | tail -n +5 | sort | fzf
 }
-function hsi() {
-  history | grep -E -i "$1"
-}
 
-function esi() {
-  env | grep -E -i "$1"
-}
+#function hsi() {
+  #history | grep -E -i "$1"
+#}
+
+#function esi() {
+  #env | grep -E -i "$1"
+#}
