@@ -4,7 +4,10 @@ if not functions -q fisher
     fish -c fisher
 end
 
-theme_gruvbox dark soft
+if status --is-interactive
+    fish_vi_key_bindings
+    theme_gruvbox dark soft
+end
 
 export HOMESHICK_REPOS=$HOME/.homesick/repos
 source $HOMESHICK_REPOS/runcom2/localenv
