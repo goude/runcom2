@@ -4,7 +4,7 @@ export RUNCOM2_ICON='🤖'
 
 export RUNCOM2_PATH=$HOMESHICK_REPOS/runcom2
 #export RUNCOM2_TMUX_SHELL=$SHELL
-export RUNCOM2_TMUX_SHELL=/usr/bin/fish
+export RUNCOM2_TMUX_SHELL=$HOME/bin/fish
 export RUNCOM2_TMPDIR=$HOME/tmp
 #export RUNCOM2_DICTIONARIES=$HOME/.local/share/dictionaries
 

@@ -19,6 +19,7 @@ $RUNCOM2_PIPENV_CMD install --skip-lock \
   jedi \
   mypy \
   pipx \
+  neovim \
   pynvim \
   pytest \
   pydocstyle \
