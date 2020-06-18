@@ -7,6 +7,7 @@ end
 if status --is-interactive
     fish_vi_key_bindings
     theme_gruvbox dark soft
+    starship init fish | source
 end
 
 export HOMESHICK_REPOS=$HOME/.homesick/repos
