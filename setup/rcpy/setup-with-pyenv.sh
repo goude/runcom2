@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+source "$RUNCOM2_PATH/rc.pyenv"
+source "$RUNCOM2_PATH/localenv"
+
 # this allows pyenv to see Homebrew's python version
 ln -s /usr/local/Cellar/python/* ~/.pyenv/versions/
 
