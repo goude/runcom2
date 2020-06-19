@@ -17,12 +17,11 @@ git config --global merge.tool vimdiff
 git config --global --unset http.sslVerify
 git config --global --unset http.sslCAinfo
 
-
 # aliases
-git config --global alias.undo-commit 'reset --soft HEAD^'
+#git config --global alias.undo-commit 'reset --soft HEAD^'
 
 # diff configuration
-git config --global icdiff.options '--line-numbers'
-git-nbdiffdriver config --enable --global
+#git config --global icdiff.options '--line-numbers'
+#git-nbdiffdriver config --enable --global
 
 git config --list
