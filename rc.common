@@ -30,7 +30,7 @@ export FZF_DEFAULT_OPTS='
 '
 
 #export PATH=$PATH:$GOPATH/bin:$HOME/bin:$HOME/.fzf/bin:$HOME/.cargo/bin
-export PATH=$HOME/bin:$PATH:$HOME/.fzf/bin
+export PATH=$HOME/bin:$HOME/.cargo/bin:$PATH:$HOME/.fzf/bin:
 
 # Source more environment variables
 source $rcfiles/localenv
