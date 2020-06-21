@@ -12,7 +12,7 @@ if status --is-interactive
     pyenv virtualenv-init - | source
 
     fish_vi_key_bindings
-    theme_gruvbox dark soft
+    theme_gruvbox dark
 
     starship init fish | source
 
