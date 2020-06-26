@@ -20,4 +20,5 @@ if status --is-interactive
     source $HOMESHICK_REPOS/homeshick/completions/homeshick.fish
 
     source $RUNCOM2_PATH/aliases
+    source $RUNCOM2_PATH/aliases-linux
 end
