@@ -163,8 +163,8 @@ let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
 
 " Prose / markdown / txt
-function! Prose()
-  call pencil#init()
+function! MarkdownWriting()
+  " call pencil#init()
   call lexical#init()
   call litecorrect#init()
   call textobj#quote#init()
@@ -200,9 +200,9 @@ function! Prose()
 endfunction
 
 " automatically initialize buffer by file type
-augroup vimrc-prose
+augroup vimrc-markdownwriting
   au!
-  au FileType markdown,mkd call Prose()
+  au FileType markdown,mkd call MarkdownWriting()
 augroup END
 
 " invoke manually by command for other file types

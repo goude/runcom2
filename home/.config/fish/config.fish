@@ -4,15 +4,21 @@ if not functions -q fisher
     fish -c fisher
 end
 
-if status --is-interactive
-    fish_vi_key_bindings
-    theme_gruvbox dark soft
-end
-
 export HOMESHICK_REPOS=$HOME/.homesick/repos
 source $HOMESHICK_REPOS/runcom2/localenv
 
-source $HOMESHICK_REPOS/homeshick/homeshick.fish
-source $HOMESHICK_REPOS/homeshick/completions/homeshick.fish
+if status --is-interactive
+    pyenv init - | source
+    pyenv virtualenv-init - | source
 
-source $RUNCOM2_PATH/aliases
+    fish_vi_key_bindings
+    theme_gruvbox dark
+
+    starship init fish | source
+
+    source $HOMESHICK_REPOS/homeshick/homeshick.fish
+    source $HOMESHICK_REPOS/homeshick/completions/homeshick.fish
+
+    source $RUNCOM2_PATH/aliases
+    source $RUNCOM2_PATH/aliases-linux
+end

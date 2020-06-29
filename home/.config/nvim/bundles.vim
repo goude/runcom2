@@ -231,6 +231,8 @@ Plug 'goude/todo.txt-vim'
 
 " }
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 " DISABLED/TODO {
 
 " https://github.com/ivanov/vim-ipython/

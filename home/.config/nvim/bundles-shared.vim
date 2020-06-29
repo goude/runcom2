@@ -32,10 +32,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'nanotech/jellybeans.vim'
 " Base16 color schemes - use locally generated
 "Plug 'chriskempson/base16-vim'
-Plug '~/.local/share/base16/templates/vim'
+"Plug '~/.local/share/base16/templates/vim'
 
 " Fancy start screen for vim
 Plug 'mhinz/vim-startify'
+
+Plug 'bouk/vim-markdown'
 
 "Plug 'tpope/vim-unimpaired'
 " }
