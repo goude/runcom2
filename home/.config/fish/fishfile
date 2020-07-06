@@ -2,3 +2,4 @@ jomik/fish-gruvbox
 edc/bass
 oh-my-fish/plugin-pyenv
 brigand/fast-nvm-fish
+evanlucas/fish-kubectl-completions
