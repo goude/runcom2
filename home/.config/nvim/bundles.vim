@@ -222,6 +222,9 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
 
+" yaml
+Plug 'pedrohdz/vim-yaml-folds'
+
 " }
 
 " Customized Syntax Plugins {

@@ -13,6 +13,7 @@ Plug 'tpope/vim-repeat'
 " Color schemes
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
 
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
@@ -28,16 +29,10 @@ Plug 'scrooloose/nerdcommenter'
 
 " Massive collection of syntax highlighting / ftdetect / indent plugins
 Plug 'sheerun/vim-polyglot'
-
-Plug 'nanotech/jellybeans.vim'
-" Base16 color schemes - use locally generated
-"Plug 'chriskempson/base16-vim'
-"Plug '~/.local/share/base16/templates/vim'
+Plug 'bouk/vim-markdown'
 
 " Fancy start screen for vim
 Plug 'mhinz/vim-startify'
-
-Plug 'bouk/vim-markdown'
 
 "Plug 'tpope/vim-unimpaired'
 " }

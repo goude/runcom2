@@ -130,6 +130,12 @@ augroup END
 
 " Autocommands & language-specific configs {
 
+" yaml
+augroup vimrc-yaml
+  au!
+  au Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
+
 " html
 " for html files, 2 spaces
 augroup vimrc-html
@@ -137,7 +143,7 @@ augroup vimrc-html
   au Filetype html setlocal ts=2 sw=2 expandtab
 augroup END
 
-" python
+" python {
 " vim-python
 augroup vimrc-python
   au!
@@ -161,6 +167,8 @@ let g:jedi#smart_auto_mappings = 0
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
+
+" }
 
 " Prose / markdown / txt
 function! MarkdownWriting()
@@ -206,7 +214,7 @@ augroup vimrc-markdownwriting
 augroup END
 
 " invoke manually by command for other file types
-command! -nargs=0 Prose call Prose()
+command! -nargs=0 MarkdownWriting call MarkdownWriting()
 
 " }
 

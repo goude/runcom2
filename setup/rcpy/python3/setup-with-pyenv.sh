@@ -53,6 +53,7 @@ pyenv_symlinks=(
   "topydo"
   "vd"
   "yapf"
+  "yamllint"
 )
 
 for i in "${pyenv_symlinks[@]}"
