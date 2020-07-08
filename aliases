@@ -30,6 +30,7 @@ alias ....='cd ../../..'
 alias h='history'
 alias s='ssh'
 alias n='nvim'
+alias k='kubectl'
 
 # grepping aliases
 alias esi='env | grep -i $1'
