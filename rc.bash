@@ -10,10 +10,17 @@ source $RUNCOM2_PATH/rc.common-post
 source $RUNCOM2_PATH/utils/fix_alias_completion.bash
 
 # Define prompt
-#bpr="$RUNCOM2_ICON"
-bpr="\[$IBlack\]\[$CReset\] "
+bpr="$RUNCOM2_ICON "
+bpr+="\[$IRed\]\u\[$CReset\]"
+bpr+="\[$IBlack\]@\[$CReset\]"
+bpr+="\[$IGreen\]\h\[$CReset\]"
+bpr+=" \[$IBlack\]\[$CReset\] "
 export PS1=$bpr
 unset bpr
+
+if command_exists starship; then
+  eval "$(starship init bash)"
+fi
 
 # Deduplicate PATH
 dedup_pathvar PATH
