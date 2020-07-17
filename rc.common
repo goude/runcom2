@@ -5,7 +5,7 @@ export HOMESHICK_REPOS=$HOME/.homesick/repos
 rcfiles=$HOMESHICK_REPOS/runcom2
 system=`$rcfiles/utils/system`
 
-# Ensure languages are set
+# Ensure locale is set
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
@@ -53,5 +53,5 @@ fi
 # Activate homeshick - git dotfile synchronizer
 source $HOMESHICK_REPOS/homeshick/homeshick.sh
 
-# Activate pyenv
+# Activate pyenv (existence check is performed by script)
 . "$rcfiles/rc.pyenv"

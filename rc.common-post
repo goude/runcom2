@@ -61,13 +61,8 @@ fi
 eval "$(fasd --init auto)"
 
 # nvm (slow loading)
-if [[ "${IS_PRUNCOM}" = 1 ]]; then
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-else
-  # TODO: temporary disabling
-  #alias nvm='[ -s "$NVM_DIR/nvm.sh" ] && unalias nvm && . "$NVM_DIR/nvm.sh" && nvm $@'
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-fi
+#alias nvm='[ -s "$NVM_DIR/nvm.sh" ] && unalias nvm && . "$NVM_DIR/nvm.sh" && nvm $@'
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Turn off Ctrl-s XOFF, so we can use C-S mapping in vim
 # Commented out pending further investigation (x key stopped working)
@@ -78,6 +73,7 @@ stty ixoff -ixon
 stty stop undef
 stty start undef
 # End magic mumbo jumbo block
+
 # Custom aliases
 . "$rcfiles/aliases"
 
