@@ -14,3 +14,4 @@
         - silversearcher-ag
         - fzf
         - python3-pip
+        - python3-venv
