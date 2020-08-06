@@ -352,7 +352,8 @@ let g:ale_fixers = {
 function! Foobar() abort
   let td = fnamemodify(getcwd(), ":~:.")
   let wd = pathshorten(td)
-  return '📁 ' . ( strlen(wd) ? wd : '[No CWD]' )
+  "return '📁 ' . ( strlen(wd) ? wd : '[No CWD]' )
+  return ( strlen(wd) ? wd : '[No CWD]' )
 endfunction
 
 set noshowmode " disabled, since it's displayed by lightline
@@ -363,9 +364,9 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'workdir', 'gutentag' ] ],
       \   'right': [
       \              [ 'linter_checking', 'linter_warnings', 'linter_errors', 'linter_ok'],
-      \              [ 'wordcount', 'lineinfo', 'charvaluehex' ],
+      \              [ 'wordcount', 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'pencil', 'fileformat', 'fileencoding', 'filetype', ]
+      \              [ 'pencil', 'filetype', ]
       \            ]
       \ }
       \ }
