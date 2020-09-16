@@ -12,4 +12,4 @@ ln -s /usr/local/Cellar/python/* ~/.pyenv/versions/
 
 pyenv virtualenv-delete neovim3
 
-pyenv virtualenv system neovim3
+pyenv virtualenv 3.7.9 neovim3

@@ -9,9 +9,11 @@ pyenv activate neovim3
 ln -sf "$(pyenv which python3)" ~/bin/neovim-python3
 ln -sf "$(pyenv which pip3)" ~/bin/neovim-pip3
 
-pip3 install wheel
+pip_cmd="$(pyenv which pip3)"
 
-pip3 install \
+$pip_cmd install wheel
+
+$pip_cmd install \
   autopep8 \
   black \
   docker-compose \
