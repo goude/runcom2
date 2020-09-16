@@ -225,6 +225,10 @@ Plug 'mattn/emmet-vim'
 " yaml
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pearofducks/ansible-vim'
+
+" vlang
+Plug 'ollykel/v-vim'
+
 " }
 
 " Customized Syntax Plugins {
