@@ -4,16 +4,17 @@ set -e
 source "$RUNCOM2_PATH/rc.pyenv"
 source "$RUNCOM2_PATH/localenv"
 
-pyenv activate neovim3
+pyenv activate 3.7.9/envs/neovim3
 
 ln -sf "$(pyenv which python3)" ~/bin/neovim-python3
 ln -sf "$(pyenv which pip3)" ~/bin/neovim-pip3
+ln -sf "$(pyenv which pip)" ~/bin/neovim-pip
 
-pip_cmd="$(pyenv which pip3)"
+pip_cmd="$(pyenv which pip)"
 
-$pip_cmd install wheel
+$pip_cmd install --upgrade pip wheel
 
-$pip_cmd install \
+$pip_cmd install --upgrade \
   autopep8 \
   black \
   docker-compose \

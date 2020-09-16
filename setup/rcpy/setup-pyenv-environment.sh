@@ -9,6 +9,7 @@ ln -s /usr/local/Cellar/python/* ~/.pyenv/versions/
 # to detect system python:
 # sudo ln -s /usr/bin/python3 /usr/bin/python
 # or use python3-is-python package
+pyenv install 3.7.9
 
 pyenv virtualenv-delete neovim3
 

@@ -13,6 +13,9 @@
 "
 " }
 
+" Needs to be before loading polyglot
+let g:polyglot_disabled = ['python']
+
 " Initialization / load bundles {
 if has('vim_starting')
   set nocompatible
@@ -44,7 +47,8 @@ call plug#end()
 filetype plugin indent on
 
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-let g:python3_host_prog=$HOME . '/bin/neovim-python3'
+"let g:python3_host_prog=$HOME . '/bin/neovim-python3'
+let g:python3_host_prog=$HOME . '/.pyenv/versions/3.7.9/envs/neovim3/bin/python3'
 " }
 
 " Load shared init {
@@ -165,7 +169,6 @@ let g:jedi#smart_auto_mappings = 0
 
 " Syntax highlight
 " Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
 
 " }
