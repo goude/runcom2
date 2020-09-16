@@ -4,7 +4,7 @@ source "$RUNCOM2_PATH/rc.pyenv"
 source "$RUNCOM2_PATH/localenv"
 
 # this allows pyenv to see Homebrew's python version
-ln -s /usr/local/Cellar/python/* ~/.pyenv/versions/
+#ln -s /usr/local/Cellar/python/* ~/.pyenv/versions/
 
 # to detect system python:
 # sudo ln -s /usr/bin/python3 /usr/bin/python
