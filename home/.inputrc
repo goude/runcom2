@@ -29,10 +29,12 @@ set show-all-if-ambiguous off
 # https://blog.bugsnag.com/tmux-and-vim/
 set editing-mode vi
 set keymap vi
-$if mode=vi
-  set keymap vi-insert
-  "jk": vi-movement-mode # remap escape
-$endif
+
+# Use jk as escape
+#$if mode=vi
+  #set keymap vi-insert
+  #"jk": vi-movement-mode # remap escape
+#$endif
 
 # Fix Ctrl-L not clearing screen in Bash
 set keymap vi-insert

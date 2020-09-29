@@ -23,3 +23,4 @@ if status --is-interactive
     source $RUNCOM2_PATH/aliases
     source $RUNCOM2_PATH/aliases-linux
 end
+set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
