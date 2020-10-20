@@ -285,8 +285,11 @@ augroup END
 set termguicolors
 
 " Speed up alacritty on OSX
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
+"hi! Normal ctermbg=NONE guibg=NONE
+"hi! NonText ctermbg=NONE guibg=NONE
+
+" Make tildes go away
+"hi! EndOfBuffer ctermfg=NONE guibg=NONE
 
 " Override search highlights
 " https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
