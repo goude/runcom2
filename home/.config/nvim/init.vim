@@ -188,10 +188,6 @@ let g:lightline = {
       \              [ 'pencil', 'filetype', ]
       \            ],
       \ },
-      \ 'tabline': {
-      \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
-      \ },
       \ }
 
 let g:lightline.component = {
@@ -212,7 +208,6 @@ let g:lightline.component_type = {
       \     'linter_warnings': 'warning',
       \     'linter_errors': 'error',
       \     'linter_ok': 'left',
-      \     'buffers': 'tabsel',
       \ }
 
 let g:lightline.component_expand = {
@@ -220,8 +215,9 @@ let g:lightline.component_expand = {
       \  'linter_warnings': 'lightline#ale#warnings',
       \  'linter_errors': 'lightline#ale#errors',
       \  'linter_ok': 'lightline#ale#ok',
-      \  'buffers': 'lightline#bufferline#buffers',
       \ }
+
+let g:lightline.colorscheme = 'gruvbox'
 
 let g:lightline#ale#indicator_checking = "\uf110"
 let g:lightline#ale#indicator_warnings = "\uf071"

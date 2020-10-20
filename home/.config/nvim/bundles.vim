@@ -48,10 +48,11 @@ Plug 'reedes/vim-pencil'
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
-Plug 'mengelbrecht/lightline-bufferline'
+"Plug 'mengelbrecht/lightline-bufferline'
+Plug 'shinchu/lightline-gruvbox.vim'
 
 " A well-integrated, low-configuration buffer list that lives in the tabline
-"Plug 'ap/vim-buftabline'
+Plug 'ap/vim-buftabline'
 
 " Show register contents (C-R in insert mode)
 Plug 'junegunn/vim-peekaboo'
