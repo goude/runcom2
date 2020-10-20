@@ -11,18 +11,18 @@
 Plug 'tpope/vim-repeat'
 
 " Color schemes
-Plug 'tomasr/molokai'
+"Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 
-Plug 'Raimondi/delimitMate'
-Plug 'Yggdroot/indentLine'
+"Plug 'Raimondi/delimitMate'
+"Plug 'Yggdroot/indentLine'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'easymotion/vim-easymotion'
-Plug 'junegunn/vim-easy-align'
-Plug 'terryma/vim-expand-region'
+"Plug 'junegunn/vim-easy-align'
+"Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-surround'
-Plug 'wellle/targets.vim'
+"Plug 'wellle/targets.vim'
 
 " Comment functions so powerful—no comment necessary.
 Plug 'scrooloose/nerdcommenter'

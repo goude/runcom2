@@ -1,11 +1,20 @@
 " vim: set sw=2 ts=2 sts=2 et tw=78 foldmarker={,} foldmethod=marker spell:
 
-" Pre-Workarounds {
-
-" Needs to be defined before loading polyglot
-let g:polyglot_disabled = ['python']
-
+" Preamble {
+" TODO: have a look at (type ‘gx’ when cursor is on link)
+" - http://wrotenwrites.com/a_modern_terminal_workflow_2/
+" - https://github.com/w0rp/ale (htmlhint and friends also)
+" - https://github.com/junegunn/dotfiles/blob/master/vimrc
+" - https://medium.com/@huntie/10-essential-vim-plugins-for-2018-39957190b7a9
+"
+" - https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
+"
+"
+"
 " }
+
+" Needs to be before loading polyglot
+let g:polyglot_disabled = ['python']
 
 " Initialization / load bundles {
 if has('vim_starting')
@@ -14,8 +23,6 @@ endif
 
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
-" If this fails, it's usually because we're in the fish shell. Run once in
-" bash first.
 if !filereadable(vimplug_exists)
   echo "Installing Vim-Plug..."
   echo ""
@@ -65,6 +72,33 @@ nnoremap <silent> <leader>ev :e $HOMESHICK_REPOS/runcom/home/.config/nvim/init.v
 
 " Reload init.vim
 nnoremap <silent> <leader>er :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo $MYVIMRC 'reloaded'"<CR>
+
+" }
+
+" Plugin Mappings {
+" vim-sneak
+let g:sneak#s_next = 1
+nmap f <Plug>Sneak_f
+nmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
+
+" vim-easy-align.vim
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" zoomwintab.vim
+" Zoom in/out current window as in tmux (remap to zoomwintab.vim default)
+nnoremap <silent><C-w>z <C-w>o
+nnoremap <silent><C-w><C-z> <C-w>o
 
 " }
 
@@ -189,6 +223,85 @@ command! -nargs=0 MarkdownWriting call MarkdownWriting()
 
 " Plugin settings {
 
+let g:racer_experimental_completer = 1
+
+" Lexical {
+let g:lexical#thesaurus = [
+  \ '~/.local/share/dictionaries/mthesaur.txt',
+  \ '~/.local/share/dictionaries/en-thesaurus.txt'
+\ ]
+
+let g:lexical#dictionary = ['/usr/share/dict/words',]
+
+"let g:lexical#spellfile = ['~/.vim/spell/en.utf-8.add',]
+"
+" }
+
+
+" Vista {
+" To enable fzf's preview window set g:vista_fzf_preview.
+" The elements of g:vista_fzf_preview will be passed as arguments to fzf#vim#with_preview()
+" For example:
+let g:vista_fzf_preview = ['right:50%']
+
+" Ensure you have installed some decent font to show these pretty symbols, then you can enable icon for the kind.
+let g:vista#renderer#enable_icon = 1
+
+" }
+
+" pear-tree {
+
+" Default rules for matching:
+let g:pear_tree_pairs = {
+            \ '(': {'closer': ')'},
+            \ '[': {'closer': ']'},
+            \ '{': {'closer': '}'},
+            \ "'": {'closer': "'"},
+            \ '"': {'closer': '"'}
+            \ }
+" See pear-tree/after/ftplugin/ for filetype-specific matching rules
+
+" Pear Tree is enabled for all filetypes by default:
+let g:pear_tree_ft_disabled = []
+
+" Pair expansion is dot-repeatable by default:
+let g:pear_tree_repeatable_expand = 1
+
+" Smart pairs are disabled by default:
+let g:pear_tree_smart_openers = 0
+let g:pear_tree_smart_closers = 0
+let g:pear_tree_smart_backspace = 0
+
+" If enabled, smart pair functions timeout after 60ms:
+let g:pear_tree_timeout = 60
+
+" Automatically map <BS>, <CR>, and <Esc>
+let g:pear_tree_map_special_keys = 1
+
+" Default mappings:
+imap <BS> <Plug>(PearTreeBackspace)
+imap <CR> <Plug>(PearTreeExpand)
+imap <Esc> <Plug>(PearTreeFinishExpansion)
+" Pear Tree also makes <Plug> mappings for each opening and closing string.
+"     :help <Plug>(PearTreeOpener)
+"     :help <Plug>(PearTreeCloser)
+
+" Not mapped by default:
+" <Plug>(PearTreeSpace)
+" <Plug>(PearTreeJump)
+" <Plug>(PearTreeExpandOne)
+" <Plug>(PearTreeJNR)
+
+" }
+
+" matchup {
+let g:matchup_matchparen_enabled = 1
+let g:matchup_motion_enabled = 1
+let g:matchup_text_obj_enabled = 1
+let g:matchup_surround_enabled = 1
+let g:matchup_transmute_enabled = 1
+" }
+
 " fzf.vim {
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
@@ -199,6 +312,14 @@ if executable('ag')
   let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
   set grepprg=ag\ --nogroup\ --no-color
 endif
+" }
+
+" Base16 {
+"let g:base16_shell_path = '~/.local/share/base16/templates/shell/scripts'
+"if filereadable(expand('~/.vimrc_background'))
+  "let base16colorspace=256
+  "source ~/.vimrc_background
+"endif
 " }
 
 " ALE {
@@ -233,10 +354,15 @@ let g:ale_fixers = {
 
 " }
 
-" Lightline configuration {
+" Lightline {
+function! Foobar() abort
+  let td = fnamemodify(getcwd(), ":~:.")
+  let wd = pathshorten(td)
+  "return '📁 ' . ( strlen(wd) ? wd : '[No CWD]' )
+  return ( strlen(wd) ? wd : '[No CWD]' )
+endfunction
 
-set noshowmode      " disabled, since it's displayed by lightline
-set showtabline=2   " needed for lightline-tabline
+set noshowmode " disabled, since it's displayed by lightline
 
 let g:lightline = {
       \ 'active': {
@@ -247,12 +373,8 @@ let g:lightline = {
       \              [ 'wordcount', 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'pencil', 'filetype', ]
-      \            ],
-      \ },
-      \ 'tabline': {
-      \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
-      \ },
+      \            ]
+      \ }
       \ }
 
 let g:lightline.component = {
@@ -273,7 +395,6 @@ let g:lightline.component_type = {
       \     'linter_warnings': 'warning',
       \     'linter_errors': 'error',
       \     'linter_ok': 'left',
-      \     'buffers': 'tabsel',
       \ }
 
 let g:lightline.component_expand = {
@@ -281,7 +402,6 @@ let g:lightline.component_expand = {
       \  'linter_warnings': 'lightline#ale#warnings',
       \  'linter_errors': 'lightline#ale#errors',
       \  'linter_ok': 'lightline#ale#ok',
-      \  'buffers': 'lightline#bufferline#buffers',
       \ }
 
 let g:lightline#ale#indicator_checking = "\uf110"
@@ -291,6 +411,33 @@ let g:lightline#ale#indicator_ok = "\uf00c"
 
 " }
 
+" expand-region {
+let g:expand_region_text_objects = {
+      \ 'iw'  :1,
+      \ 'iW'  :1,
+      \ 'i"'  :1,
+      \ 'i''' :1,
+      \ 'i]'  :1,
+      \ 'ib'  :1,
+      \ 'iB'  :1,
+      \ 'il'  :1,
+      \ 'ip'  :1,
+      \ 'ie'  :0,
+      \ }
+
+"call expand_region#custom_text_objects({
+      "\ "\/\\n\\n\<CR>": 0,
+      "\ 'a]' :0,
+      "\ 'ab' :0,
+      "\ 'aB' :0,
+      "\ 'ii' :0,
+      "\ 'ai' :0,
+      "\ })
+
+"map K <Plug>(expand_region_expand)
+"map J <Plug>(expand_region_shrink)
+
+" }
 
 " Pencil configuration {
 "let g:pencil#mode_indicators = {'hard': '␍', 'auto': 'ª', 'soft': '⤸', 'off': '',}
@@ -308,6 +455,38 @@ let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 " }
 
+" Semshi {
+function CustomSemshiHighlights()
+  " FIXME: clean up ctermfg/guifg globally - autogeneration of missings?
+  " On Ubuntu/tmux/kitty, it's the gui* colors that are displayed
+  " hi semshiSelected ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#d7005f
+  hi semshiSelected ctermfg=247 ctermbg=237 guifg=#aaaaaa guibg=#333333
+endfunction
+
+augroup semshi-python
+  au!
+  autocmd FileType python call CustomSemshiHighlights()
+augroup END
+
+" Note: <leader>ss is used for global substitution
+nnoremap <silent> <leader>sr :Semshi rename<CR>
+
+nnoremap <silent> <leader><Tab> :Semshi goto name next<CR>
+nnoremap <silent> <leader><S-Tab> :Semshi goto name prev<CR>
+
+nnoremap <silent> <leader>sc :Semshi goto class next<CR>
+nnoremap <silent> <leader>sC :Semshi goto class prev<CR>
+
+nnoremap <silent> <leader>sf :Semshi goto function next<CR>
+nnoremap <silent> <leader>sF :Semshi goto function prev<CR>
+
+nnoremap <silent> <leader>su :Semshi goto unresolved first<CR>
+nnoremap <silent> <leader>sp :Semshi goto parameterUnused first<CR>
+
+nnoremap <silent> <leader>se :Semshi error<CR>
+nnoremap <silent> <leader>sg :Semshi goto error<CR>
+
+" }
 
 " }
 
@@ -318,8 +497,8 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
 
-"let g:ncm2_look_mark = '👀'
-"let g:ncm2_look_enabled = 0
+let g:ncm2_look_mark = '👀'
+let g:ncm2_look_enabled = 0
 
 set shortmess+=c
 
@@ -375,83 +554,6 @@ augroup vimrc-yaml-notes
 augroup END
 "}
 
-
-" Disabled {
-
-" vim-easy-align.vim
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-"xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-"nmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-"vmap <Enter> <Plug>(EasyAlign)
-
-" zoomwintab.vim
-" Zoom in/out current window as in tmux (remap to zoomwintab.vim default)
-"nnoremap <silent><C-w>z <C-w>o
-"nnoremap <silent><C-w><C-z> <C-w>o
-
-" expand-region {
-"let g:expand_region_text_objects = {
-      "\ 'iw'  :1,
-      "\ 'iW'  :1,
-      "\ 'i"'  :1,
-      "\ 'i''' :1,
-      "\ 'i]'  :1,
-      "\ 'ib'  :1,
-      "\ 'iB'  :1,
-      "\ 'il'  :1,
-      "\ 'ip'  :1,
-      "\ 'ie'  :0,
-      "\ }
-
-"call expand_region#custom_text_objects({
-      "\ "\/\\n\\n\<CR>": 0,
-      "\ 'a]' :0,
-      "\ 'ab' :0,
-      "\ 'aB' :0,
-      "\ 'ii' :0,
-      "\ 'ai' :0,
-      "\ })
-
-"map K <Plug>(expand_region_expand)
-"map J <Plug>(expand_region_shrink)
-
-" }
-" Semshi {
-"function CustomSemshiHighlights()
-  "" FIXME: clean up ctermfg/guifg globally - autogeneration of missings?
-  "" On Ubuntu/tmux/kitty, it's the gui* colors that are displayed
-  "" hi semshiSelected ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#d7005f
-  "hi semshiSelected ctermfg=247 ctermbg=237 guifg=#aaaaaa guibg=#333333
-"endfunction
-
-"augroup semshi-python
-  "au!
-  "autocmd FileType python call CustomSemshiHighlights()
-"augroup END
-
-"" Note: <leader>ss is used for global substitution
-"nnoremap <silent> <leader>sr :Semshi rename<CR>
-
-"nnoremap <silent> <leader><Tab> :Semshi goto name next<CR>
-"nnoremap <silent> <leader><S-Tab> :Semshi goto name prev<CR>
-
-"nnoremap <silent> <leader>sc :Semshi goto class next<CR>
-"nnoremap <silent> <leader>sC :Semshi goto class prev<CR>
-
-"nnoremap <silent> <leader>sf :Semshi goto function next<CR>
-"nnoremap <silent> <leader>sF :Semshi goto function prev<CR>
-
-"nnoremap <silent> <leader>su :Semshi goto unresolved first<CR>
-"nnoremap <silent> <leader>sp :Semshi goto parameterUnused first<CR>
-
-"nnoremap <silent> <leader>se :Semshi error<CR>
-"nnoremap <silent> <leader>sg :Semshi goto error<CR>
-
-" }
 " Whitespace Warnings {
 
 " Credit: krader1961 in https://github.com/tpope/vim-sleuth/issues/13
@@ -469,6 +571,9 @@ augroup END
 "hi! ExtraWhitespaceWarn ctermbg=darkred guibg=darkred
 
 " }
+
+" Disabled {
+
 " ruby
 "let g:rubycomplete_buffer_loading = 1
 "let g:rubycomplete_classes_in_global = 1
@@ -651,113 +756,5 @@ augroup END
 " vimshell.vim
 "let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 "let g:vimshell_prompt =  '$ '
-
-" pear-tree {
-
-" Default rules for matching:
-"let g:pear_tree_pairs = {
-            "\ '(': {'closer': ')'},
-            "\ '[': {'closer': ']'},
-            "\ '{': {'closer': '}'},
-            "\ "'": {'closer': "'"},
-            "\ '"': {'closer': '"'}
-            "\ }
-"" See pear-tree/after/ftplugin/ for filetype-specific matching rules
-
-"" Pear Tree is enabled for all filetypes by default:
-"let g:pear_tree_ft_disabled = []
-
-"" Pair expansion is dot-repeatable by default:
-"let g:pear_tree_repeatable_expand = 1
-
-"" Smart pairs are disabled by default:
-"let g:pear_tree_smart_openers = 0
-"let g:pear_tree_smart_closers = 0
-"let g:pear_tree_smart_backspace = 0
-
-"" If enabled, smart pair functions timeout after 60ms:
-"let g:pear_tree_timeout = 60
-
-"" Automatically map <BS>, <CR>, and <Esc>
-"let g:pear_tree_map_special_keys = 1
-
-" Default mappings:
-"imap <BS> <Plug>(PearTreeBackspace)
-"imap <CR> <Plug>(PearTreeExpand)
-"imap <Esc> <Plug>(PearTreeFinishExpansion)
-" Pear Tree also makes <Plug> mappings for each opening and closing string.
-"     :help <Plug>(PearTreeOpener)
-"     :help <Plug>(PearTreeCloser)
-
-" Not mapped by default:
-" <Plug>(PearTreeSpace)
-" <Plug>(PearTreeJump)
-" <Plug>(PearTreeExpandOne)
-" <Plug>(PearTreeJNR)
-
-" }
-
-" matchup {
-"let g:matchup_matchparen_enabled = 1
-"let g:matchup_motion_enabled = 1
-"let g:matchup_text_obj_enabled = 1
-"let g:matchup_surround_enabled = 1
-"let g:matchup_transmute_enabled = 1
-" }
-
-"function! Foobar() abort
-  "let td = fnamemodify(getcwd(), ":~:.")
-  "let wd = pathshorten(td)
-  ""return '📁 ' . ( strlen(wd) ? wd : '[No CWD]' )
-  "return ( strlen(wd) ? wd : '[No CWD]' )
-"endfunction
-
-"let g:racer_experimental_completer = 1
-
-" Lexical {
-"let g:lexical#thesaurus = [
-  "\ '~/.local/share/dictionaries/mthesaur.txt',
-  "\ '~/.local/share/dictionaries/en-thesaurus.txt'
-"\ ]
-
-"let g:lexical#dictionary = ['/usr/share/dict/words',]
-
-"let g:lexical#spellfile = ['~/.vim/spell/en.utf-8.add',]
-"
-" }
-
-
-" Vista {
-" To enable fzf's preview window set g:vista_fzf_preview.
-" The elements of g:vista_fzf_preview will be passed as arguments to fzf#vim#with_preview()
-" For example:
-"let g:vista_fzf_preview = ['right:50%']
-
-" Ensure you have installed some decent font to show these pretty symbols, then you can enable icon for the kind.
-"let g:vista#renderer#enable_icon = 1
-
-" }
-
-" Base16 {
-"let g:base16_shell_path = '~/.local/share/base16/templates/shell/scripts'
-"if filereadable(expand('~/.vimrc_background'))
-  "let base16colorspace=256
-  "source ~/.vimrc_background
-"endif
-" }
-
-" Plugin Mappings {
-" vim-sneak
-"let g:sneak#s_next = 1
-"nmap f <Plug>Sneak_f
-"nmap F <Plug>Sneak_F
-"xmap f <Plug>Sneak_f
-"xmap F <Plug>Sneak_F
-"omap f <Plug>Sneak_f
-"omap F <Plug>Sneak_F
-
-" }
-
-
 
 " }

@@ -2,24 +2,6 @@
 
 " Base {
 
-" Interactive command execution in vim
-"Plug 'Shougo/vimproc.vim', {'do': g:make}
-
-" TODO: Active development on unite.vim has stopped. The only future changes will be
-" bug fixes. Please see Denite.nvim.
-"
-" The unite or unite.vim plug-in can search and display information from
-" arbitrary sources like files, buffers, recently used files or registers. You
-" can run several pre-defined actions on a target displayed in the unite
-" window.
-"Plug 'shougo/unite.vim'
-
-"The vim-session plug-in improves upon Vim's built-in |:mksession| command by
-"enabling you to easily and (if you want) automatically persist and restore
-"your Vim editing sessions.
-"Plug 'xolox/vim-misc' " helpers for vim-session
-"Plug 'xolox/vim-session'
-
 " }
 
 " Git {
@@ -38,16 +20,16 @@ Plug 'junegunn/gv.vim'
 " Misc/text editing {
 
 " Writing
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+"Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/limelight.vim'
 Plug 'reedes/vim-pencil'
-Plug 'reedes/vim-lexical'
-Plug 'reedes/vim-litecorrect'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-line'
-Plug 'reedes/vim-textobj-sentence'
-Plug 'reedes/vim-textobj-quote'
-Plug 'coderifous/textobj-word-column.vim'
+"Plug 'reedes/vim-lexical'
+"Plug 'reedes/vim-litecorrect'
+"Plug 'kana/vim-textobj-user'
+"Plug 'kana/vim-textobj-line'
+"Plug 'reedes/vim-textobj-sentence'
+"Plug 'reedes/vim-textobj-quote'
+"Plug 'coderifous/textobj-word-column.vim'
 
 " Table editing and Ascii
 "Plug 'dhruvasagar/vim-table-mode'
@@ -61,32 +43,33 @@ Plug 'coderifous/textobj-word-column.vim'
 " UI {
 
 " Make gvim-only colorschemes work transparently in terminal vim
-Plug 'vim-scripts/CSApprox'
+"Plug 'vim-scripts/CSApprox'
 
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " A well-integrated, low-configuration buffer list that lives in the tabline
-Plug 'ap/vim-buftabline'
+"Plug 'ap/vim-buftabline'
 
 " Show register contents (C-R in insert mode)
 Plug 'junegunn/vim-peekaboo'
 
 " Close other buffers
-Plug 'schickling/vim-bufonly'
+"Plug 'schickling/vim-bufonly'
 
 " Navigate and highlight matching words / modern matchit and matchparen replacement
-Plug 'andymass/vim-matchup'
+"Plug 'andymass/vim-matchup'
 
 " A painless, powerful Vim auto-pair plugin
-Plug 'tmsvg/pear-tree'
+"Plug 'tmsvg/pear-tree'
 
 " A super simple, super minimal, super light-weight tab completion plugin for Vim.
 "Plug 'ajh17/VimCompletesMe'
 
 " Viewer & Finder for LSP symbols and tags
-Plug 'liuchengxu/vista.vim'
+"Plug 'liuchengxu/vista.vim'
 
 " Experimental - can be disabled if needed
 "Plug 'severin-lemaignan/vim-minimap'
@@ -114,14 +97,14 @@ Plug 'myusuf3/numbers.vim'
 Plug 'gorodinskiy/vim-coloresque'
 
 " Zoom into a window inspired by ZoomWin plugin (C-w o)
-Plug 'troydm/zoomwintab.vim'
+"Plug 'troydm/zoomwintab.vim'
 
 " }
 
 " Search {
 
 " 2-char f command - quickly move to a location
-Plug 'justinmk/vim-sneak'
+"Plug 'justinmk/vim-sneak'
 
 " The grep plugin integrates the grep, fgrep, egrep, and agrep tools with Vim
 " and allows you to search for a pattern in one or more files and jump to
@@ -167,19 +150,19 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 "Plug 'ncm2/ncm2-github'
 "Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-tagprefix'
+"Plug 'ncm2/ncm2-tagprefix'
 "Plug 'fgrsnau/ncm2-otherbuf'
 "Plug 'svermeulen/vim-yoink'
 "Plug 'svermeulen/ncm2-yoink'
-Plug 'ncm2/ncm2-cssomni'
+"Plug 'ncm2/ncm2-cssomni'
 "Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-vim'
+"Plug 'ncm2/ncm2-vim'
 "Plug 'ncm2/ncm2-ultisnips'
 
-Plug 'ncm2/ncm2-syntax'
-Plug 'Shougo/neco-syntax'
-Plug 'filipekiss/ncm2-look.vim'
+"Plug 'ncm2/ncm2-syntax'
+"Plug 'Shougo/neco-syntax'
+"Plug 'filipekiss/ncm2-look.vim'
 
 Plug 'ncm2/ncm2-racer'
 
@@ -219,15 +202,12 @@ Plug 'sirtaj/vim-openscad'
 
 " html
 Plug 'hail2u/vim-css3-syntax'
-Plug 'tpope/vim-haml'
-Plug 'mattn/emmet-vim'
+"Plug 'tpope/vim-haml'
+"Plug 'mattn/emmet-vim'
 
 " yaml
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pearofducks/ansible-vim'
-
-" vlang
-Plug 'ollykel/v-vim'
 
 " }
 
@@ -238,7 +218,7 @@ Plug 'goude/todo.txt-vim'
 
 " }
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " DISABLED/TODO {
 

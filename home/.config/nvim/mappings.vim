@@ -96,12 +96,6 @@ nnoremap <Leader>. :lcd %:p:h<CR>
 " Open previously opened buffer
 "nmap <Leader><Leader> <c-^>
 
-" Switch to next buffer
-nnoremap <Leader><Tab> :bnext!<CR>
-
-" Switch to previous buffer
-nnoremap <Leader><S-tab> :bprev!<CR>
-
 " Open WORD under cursor in default program
 nnoremap <silent><Leader>o :execute ':!xdg-open ' . shellescape('<cWORD>')<CR>
 
@@ -119,7 +113,6 @@ nmap <silent> <Leader>A ^vio<C-V>$A
 
 " Insert timestamp in ISO8601 format
 nnoremap <Leader>ts "=strftime("%FT%T%z")<CR>P
-
 
 " Surround with quotes
 " TODO: consider doing `set iskeyword+=.` for certain filetypes.
@@ -176,7 +169,7 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
+"nmap s <Plug>(easymotion-overwin-f)
 " or
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
