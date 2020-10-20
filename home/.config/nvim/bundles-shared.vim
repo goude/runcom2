@@ -11,17 +11,17 @@
 Plug 'tpope/vim-repeat'
 
 " Color schemes
-"Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
+"Plug 'tomasr/molokai'
 
-"Plug 'Raimondi/delimitMate'
-"Plug 'Yggdroot/indentLine'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+"Plug 'Raimondi/delimitMate'
+"Plug 'Yggdroot/indentLine'
 "Plug 'junegunn/vim-easy-align'
 "Plug 'terryma/vim-expand-region'
-Plug 'tpope/vim-surround'
 "Plug 'wellle/targets.vim'
 
 " Comment functions so powerful—no comment necessary.
@@ -33,6 +33,21 @@ Plug 'bouk/vim-markdown'
 
 " Fancy start screen for vim
 Plug 'mhinz/vim-startify'
+
+" Hard/soft line breaking
+Plug 'reedes/vim-pencil'
+
+" Show both relative and normal line numbers
+Plug 'myusuf3/numbers.vim'
+
+" Show git markers in gutter
+Plug 'airblade/vim-gitgutter'
+
+" Color preview for vim
+Plug 'gorodinskiy/vim-coloresque'
+
+" Editorconfig
+Plug 'editorconfig/editorconfig-vim'
 
 "Plug 'tpope/vim-unimpaired'
 " }

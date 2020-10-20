@@ -157,6 +157,7 @@ set titlestring=%F
 " }
 
 " Set the colorscheme
+set background=dark
 colorscheme gruvbox
 
 " Show function key mappings in startup

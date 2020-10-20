@@ -22,7 +22,6 @@ Plug 'junegunn/gv.vim'
 " Writing
 "Plug 'junegunn/goyo.vim'
 "Plug 'junegunn/limelight.vim'
-Plug 'reedes/vim-pencil'
 "Plug 'reedes/vim-lexical'
 "Plug 'reedes/vim-litecorrect'
 "Plug 'kana/vim-textobj-user'
@@ -87,15 +86,6 @@ Plug 'jistr/vim-nerdtree-tabs'
 
 " Tag navigation
 "Plug 'majutsushi/tagbar'
-
-" Show git markers in gutter
-Plug 'airblade/vim-gitgutter'
-
-" Show both relative and normal line numbers
-Plug 'myusuf3/numbers.vim'
-
-" Color preview for vim
-Plug 'gorodinskiy/vim-coloresque'
 
 " Zoom into a window inspired by ZoomWin plugin (C-w o)
 "Plug 'troydm/zoomwintab.vim'
@@ -180,9 +170,6 @@ Plug 'ncm2/ncm2-racer'
 
 " Automatically manage tag files
 "Plug 'ludovicchabant/vim-gutentags'
-
-" Editorconfig
-Plug 'editorconfig/editorconfig-vim'
 
 " Asynchronous lint engine
 Plug 'w0rp/ale'
