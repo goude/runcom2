@@ -18,11 +18,6 @@ if !filereadable(vimplug_exists)
   au VimEnter * PlugInstall
 endif
 
-let g:make = 'gmake'
-if exists('make')
-  let g:make = 'make'
-endif
-
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'tpope/vim-sensible'
 source ~/.config/nvim/bundles-shared.vim
@@ -31,8 +26,6 @@ call plug#end()
 
 filetype plugin indent on
 
-" https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-let g:python3_host_prog=$HOME . '/bin/neovim-python3'
 " }
 
 " Load shared init {
@@ -42,11 +35,7 @@ endif
 " }
 
 " Load shared mappings {
-"" Include user's local vim config
 if filereadable(expand("~/.config/nvim/mappings.vim"))
   source ~/.config/nvim/mappings.vim
 endif
 " }
-
-set background=dark
-colorscheme gruvbox
