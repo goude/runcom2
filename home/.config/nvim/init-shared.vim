@@ -145,17 +145,19 @@ set titlestring=%F
   "endfunction
 "endif
 
-function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal @".nr2char(getchar())
-endfunction
+"function! ExecuteMacroOverVisualRange()
+  "echo "@".getcmdline()
+  "execute ":'<,'>normal @".nr2char(getchar())
+"endfunction
 
-function! DisplayMessage(tname)
-  echom "MSG: " a:tname ""
-endfunction
+"function! DisplayMessage(tname)
+  "echom "MSG: " a:tname ""
+"endfunction
 
 " }
 
+" Set the colorscheme
+colorscheme gruvbox
+
 " Show function key mappings in startup
 let g:startify_custom_header = readfile(expand('~/.config/nvim/start_message.txt'))
-
