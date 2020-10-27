@@ -92,6 +92,6 @@ if [ -f ~/.localenv-post ]; then
 fi
 
 # Source optional additional settings
-if [[ -f $HOMESHICK_REPOS/pruncom/rc.pruncom-post ]]; then
-  . "$HOMESHICK_REPOS/pruncom/rc.pruncom-post"
+if [[ -f $HOMESHICK_REPOS/pruncom2/rc.pruncom-post ]]; then
+  . "$HOMESHICK_REPOS/pruncom2/rc.pruncom-post"
 fi
