@@ -97,3 +97,7 @@ fi
 if [[ -f $HOMESHICK_REPOS/pruncom2/rc.pruncom-post ]]; then
   . "$HOMESHICK_REPOS/pruncom2/rc.pruncom-post"
 fi
+
+if [[ -f $HOMESHICK_REPOS/zk/aliases ]]; then
+  . "$HOMESHICK_REPOS/zk/aliases"
+fi
