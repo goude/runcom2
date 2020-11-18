@@ -11,10 +11,10 @@ scan_for_pyfiles = false
 [kubernetes]
 disabled = true
 
-[custom.gitmail]
-command = "git config user.email"
-when = "echo 0"
-symbol = "🧔🏽"
+#[custom.gitmail]
+#command = "git config user.email"
+#when = "echo 0"
+#symbol = "🧔🏽"
 
 #[custom.ssh_no_keys]
 #description = "SSH missing keys"
@@ -25,18 +25,18 @@ symbol = "🧔🏽"
 #symbol = "🔑"
 #style = "bold fg:red"
 
-[custom.ssh_keys]
-description = "SSH key count"
-when = "ssh-add -l | grep -v -q 'no identities'"
-command = "ssh-add -l | grep -v 'no identities' | wc -l"
-format = "$symbol[$output]($style) "
-shell = ["bash", "--noprofile", "--norc"]
-symbol = "🔑"
-style = "bold fg:green"
+#[custom.ssh_keys]
+#description = "SSH key count"
+#when = "ssh-add -l | grep -v -q 'no identities'"
+#command = "ssh-add -l | grep -v 'no identities' | wc -l"
+#format = "$symbol[$output]($style) "
+#shell = ["bash", "--noprofile", "--norc"]
+#symbol = "🔑"
+#style = "bold fg:green"
 
-[custom.sudo]
-description = "valid sudo timestamp marker"
-command = "echo -n '!'"
-format = "[$symbol$output]($style) "
-style = "bold fg:bright-red"
-when = "sudo -vn &>/dev/null"
+#[custom.sudo]
+#description = "valid sudo timestamp marker"
+#command = "echo -n '!'"
+#format = "[$symbol$output]($style) "
+#style = "bold fg:bright-red"
+#when = "sudo -vn &>/dev/null"
