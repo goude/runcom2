@@ -167,7 +167,10 @@ let g:ale_fixers = {
 \   'css': [
 \      'prettier',
 \      'stylelint'
-\   ]
+\   ],
+\   'markdown': [
+\      'remark-lint'
+\   ],
 \}
 
 " }
