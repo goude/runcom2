@@ -1,7 +1,0 @@
-#!/bin/bash
-if [[ -z $1 ]]; then
-  echo "TODO: not implemented yet."
-else
-  args="$@"
-  nvim "$(date +"%Y%m%d%H%M") $args.md"
-fi
