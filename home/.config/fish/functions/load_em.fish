@@ -1,4 +1,4 @@
-function load-em --description 'Loads Fish shell function descriptions.'
+function load_em --description 'Loads Fish shell function descriptions.'
   # Load function information so it shows up in auto completion
   # # Original from https://github.com/fish-shell/fish-shell/issues/1915#issuecomment-72315918
 
