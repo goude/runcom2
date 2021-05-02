@@ -5,8 +5,8 @@ add_newline = false
 #symbol = ""
 #symbol = "➜"
 
-[python]
-scan_for_pyfiles = false
+#[python]
+#scan_for_pyfiles = false
 
 [kubernetes]
 disabled = true
