@@ -7,6 +7,7 @@ source "$REPOS/homeshick/homeshick.sh"
 echo "Cloning homeshick repos..."
 
 homeshick_repos=(
+    "goude/getaround"
     "goude/adages"
     "goude/runcom2"
 )

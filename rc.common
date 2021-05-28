@@ -45,6 +45,11 @@ if [[ ! -d $RUNCOM2_TMPDIR ]]; then
 	mkdir -p $RUNCOM2_TMPDIR
 fi
 
+# Source minimal vanilla settings
+if [[ -f $HOMESHICK_REPOS/getaround/getaround.sh ]]; then
+  source $HOMESHICK_REPOS/getaround.sh
+fi
+
 # Source optional additional settings
 if [[ -f $HOMESHICK_REPOS/pruncom2/rc.pruncom ]]; then
   source $HOMESHICK_REPOS/pruncom2/rc.pruncom
