@@ -9,8 +9,8 @@ source "$RUNCOM2_PATH/localenv"
 # to detect system python:
 # sudo ln -s /usr/bin/python3 /usr/bin/python
 # or use python3-is-python package
-pyenv install 3.7.9
+pyenv install 3.8.10
 
 pyenv virtualenv-delete neovim3
 
-pyenv virtualenv 3.7.9 neovim3
+pyenv virtualenv 3.8.10 neovim3

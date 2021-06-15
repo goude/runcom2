@@ -47,7 +47,7 @@ fi
 
 # Source minimal vanilla settings
 if [[ -f $HOMESHICK_REPOS/getaround/getaround.sh ]]; then
-  source $HOMESHICK_REPOS/getaround.sh
+  source $HOMESHICK_REPOS/getaround/getaround.sh
 fi
 
 # Source optional additional settings

@@ -4,7 +4,7 @@ set -e
 source "$RUNCOM2_PATH/rc.pyenv"
 source "$RUNCOM2_PATH/localenv"
 
-pyenv activate 3.7.9/envs/neovim3
+pyenv activate 3.8.10/envs/neovim3
 
 ln -sf "$(pyenv which python3)" ~/bin/neovim-python3
 ln -sf "$(pyenv which pip3)" ~/bin/neovim-pip3
