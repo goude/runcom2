@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ -d $HOME/.pyenv/bin ]]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
-  #export PATH="$HOME/.pyenv/bin:$PATH"
-  #eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
 source $HOME/.homesick/repos/runcom2/rc.common
 
 source $HOMESHICK_REPOS/homeshick/completions/homeshick-completion.bash
