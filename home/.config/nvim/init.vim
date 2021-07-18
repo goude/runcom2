@@ -169,7 +169,7 @@ let g:ale_fixers = {
 \      'stylelint'
 \   ],
 \   'markdown': [
-\      'remark-lint'
+\      'prettier'
 \   ],
 \}
 
