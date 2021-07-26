@@ -2,6 +2,6 @@
 
 set -e
 
-rm -rf venv-neovim3
+rm -rf ~/.pyenv
 rm -rf ~/.config/nvim
 

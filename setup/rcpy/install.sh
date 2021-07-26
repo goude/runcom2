@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Setting up rcpy..."
+echo "Setting up virtualenv for neovim3 aka runcom-py aka rcpy..."
+echo "Now using python -m venv because pyenv is broken."
 
-./setup-pyenv.sh
-./setup-pyenv-environment.sh
-./setup-neovim3.sh
+./setup-neovim3-venv.sh
