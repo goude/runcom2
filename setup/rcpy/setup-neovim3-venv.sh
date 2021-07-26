@@ -4,8 +4,8 @@ set -e
 #source "$RUNCOM2_PATH/localenv"
 #pyenv activate 3.8.10/envs/neovim3
 
-python3 -m venv venv-neovim3
-source venv-neovim3/bin/activate
+python3 -m venv neovim3-venv
+source neovim3-venv/bin/activate
 
 ln -sf "$(which python3)" ~/bin/neovim-python3
 ln -sf "$(which pip3)" ~/bin/neovim-pip3
@@ -38,8 +38,6 @@ $pip_cmd install --upgrade \
   visidata \
   yamllint \
   yapf
-
-pyenv rehash
 
 pyenv_symlinks=(
   "black"

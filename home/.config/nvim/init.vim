@@ -35,7 +35,8 @@ call plug#end()
 filetype plugin indent on
 
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-let g:python3_host_prog=$HOME . '/.pyenv/versions/3.7.9/envs/neovim3/bin/python3'
+"let g:python3_host_prog=$HOME . '/.pyenv/versions/3.7.9/envs/neovim3/bin/python3'
+let g:python3_host_prog=$HOME . '/bin/neovim-python3'
 " }
 
 " Load shared init {
