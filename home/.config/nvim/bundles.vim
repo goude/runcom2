@@ -134,11 +134,13 @@ Plug 'metalelf0/supertab'  " fork with fix
 " other improvements already.
 Plug 'honza/vim-snippets'
 
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2-path'
+"Plug 'ncm2/ncm2-racer'
+"Plug 'ncm2/ncm2-jedi'
 
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
 "Plug 'ncm2/ncm2-github'
 "Plug 'ncm2/ncm2-tmux'
 "Plug 'ncm2/ncm2-tagprefix'
@@ -147,15 +149,12 @@ Plug 'ncm2/ncm2-path'
 "Plug 'svermeulen/ncm2-yoink'
 "Plug 'ncm2/ncm2-cssomni'
 "Plug 'ncm2/ncm2-tern'
-Plug 'ncm2/ncm2-jedi'
 "Plug 'ncm2/ncm2-vim'
 "Plug 'ncm2/ncm2-ultisnips'
-
 "Plug 'ncm2/ncm2-syntax'
 "Plug 'Shougo/neco-syntax'
 "Plug 'filipekiss/ncm2-look.vim'
 
-Plug 'ncm2/ncm2-racer'
 
 " TODO: check interference/functionality
 "Plug 'Shougo/neco-syntax'

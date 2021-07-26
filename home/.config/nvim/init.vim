@@ -5,6 +5,8 @@
 " Needs to be defined before loading polyglot
 let g:polyglot_disabled = ['python']
 
+set rtp+=~/tabnine-vim
+
 " }
 
 " Initialization / load bundles {
@@ -248,7 +250,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 
 " Completion (ncm2) {
 
-autocmd BufEnter * call ncm2#enable_for_buffer()
+"autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
