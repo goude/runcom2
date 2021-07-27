@@ -38,9 +38,11 @@ alias ap='ansible-playbook'
 alias esi='env | grep -i $1'
 alias hsi='history | grep -i $1'
 
-# misc aliases
-alias clp='tmux split-window && exit'
+# tmux aliases
 alias ta='tmux attach || tmux new'
+alias clp='tmux split-window && exit'
+alias tlk='tmux kill-session -a && tmux kill-server'
+
+# misc aliases
 alias serve-directory='python3 -m http.server'
 #alias bat='batcat'
-alias tlk='tmux kill-session -a && tmux kill-server'

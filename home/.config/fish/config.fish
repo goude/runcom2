@@ -2,9 +2,6 @@ export HOMESHICK_REPOS=$HOME/.homesick/repos
 source $HOMESHICK_REPOS/runcom2/localenv
 
 if status --is-interactive
-    #pyenv init - | source
-    #pyenv virtualenv-init - | source
-
     fish_vi_key_bindings
     theme_gruvbox dark medium
 
