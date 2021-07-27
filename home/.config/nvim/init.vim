@@ -174,6 +174,12 @@ let g:ale_fixers = {
 \   'markdown': [
 \      'prettier'
 \   ],
+\   'arduino': [
+\      'clang-format'
+\   ],
+\   'cpp': [
+\      'clang-format'
+\   ],
 \}
 
 " }
