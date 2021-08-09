@@ -18,6 +18,8 @@ git config --global merge.tool vimdiff
 git config --global --unset http.sslVerify
 git config --global --unset http.sslCAinfo
 
+git config --global core.excludesfile ~/.gitignore
+
 # aliases
 #git config --global alias.undo-commit 'reset --soft HEAD^'
 
