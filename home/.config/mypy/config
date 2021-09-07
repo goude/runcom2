@@ -1,3 +1,5 @@
+[mypy]
+
 [mypy-tornado.*]
 ignore_missing_imports = True
 
