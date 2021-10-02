@@ -1,1 +1,1 @@
-ABC
+Press `s` to jump anywhere on screen. `<Leader>pp` to jump to file.
