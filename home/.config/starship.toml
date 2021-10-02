@@ -11,10 +11,9 @@ add_newline = false
 [kubernetes]
 disabled = true
 
-#[custom.gitmail]
-#command = "git config user.email"
-#when = "echo 0"
-#symbol = "🧔🏽"
+[custom.gitmail]
+command = "git config user.email"
+when = "git status"
 
 #[custom.ssh_no_keys]
 #description = "SSH missing keys"
