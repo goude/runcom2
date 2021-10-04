@@ -86,7 +86,6 @@ xnoremap > >gv
 nnoremap <Tab> :bnext!<CR>
 nnoremap <S-tab> :bprev!<CR>
 
-
 " Clear search highlight
 nnoremap <silent> <Leader>l :<C-u>nohlsearch<cr><C-l>
 
@@ -165,7 +164,7 @@ endif
 " }
 
 " EasyMotion minimal mappings {
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
+"let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
