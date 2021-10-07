@@ -117,7 +117,7 @@ endif
 
 " Completion {
 "
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 "Plug 'ervandew/supertab'
