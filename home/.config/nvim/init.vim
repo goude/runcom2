@@ -5,7 +5,7 @@
 " Needs to be defined before loading polyglot
 let g:polyglot_disabled = ['python']
 
-set rtp+=~/tabnine-vim
+" set rtp+=~/tabnine-vim
 
 " }
 
