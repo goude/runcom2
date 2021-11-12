@@ -49,5 +49,8 @@ Plug 'gorodinskiy/vim-coloresque'
 " Editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
+" Bullets
+Plug 'dkarter/bullets.vim'
+
 "Plug 'tpope/vim-unimpaired'
 " }

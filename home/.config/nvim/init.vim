@@ -151,6 +151,8 @@ let g:ale_fix_on_save = 1
 let g:ale_python_flake8_options = '--ignore=E501'
 "let g:ale_fix_on_save_ignore = ['']
 
+let g:ale_markdown_remark_lint_options = '--rc-path=$HOME/.remarkrc'
+
 " python autopep8, isort, yapf
 let g:ale_fixers = {
 \   'rust': [
