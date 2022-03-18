@@ -29,7 +29,7 @@ endif
 
 call plug#begin(expand('~/.config/nvim/plugged'))
 
-source ~/.config/nvim/bundles-shared.vim
+source ~/.config/vim-shared/bundles-shared.vim
 source ~/.config/nvim/bundles.vim
 
 call plug#end()
@@ -42,14 +42,14 @@ let g:python3_host_prog=$HOME . '/bin/neovim-python3'
 " }
 
 " Load shared init {
-if filereadable(expand("~/.config/nvim/init-shared.vim"))
-  source ~/.config/nvim/init-shared.vim
+if filereadable(expand("~/.config/vim-shared/init-shared.vim"))
+  source ~/.config/vim-shared/init-shared.vim
 endif
 " }
 
 " Load shared mappings {
-if filereadable(expand("~/.config/nvim/mappings.vim"))
-  source ~/.config/nvim/mappings.vim
+if filereadable(expand("~/.config/vim-shared/mappings.vim"))
+  source ~/.config/vim-shared/mappings.vim
 endif
 " }
 
