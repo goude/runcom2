@@ -42,6 +42,9 @@ map('n', '<C-l>', '<C-w>l')
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<leader>q', ':qa!<CR>')
 
+-- Switch tabs with Tab
+map('n', '<Tab>', ':bnext!<CR>')
+map('n', '<S-Tab>', ':bprev!<CR>')
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
