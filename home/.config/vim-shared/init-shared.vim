@@ -40,7 +40,7 @@ else
 endif
 
 " session management
-let g:session_directory = "~/.config/nvim/session"
+let g:session_directory = "~/.config/vim-shared/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
@@ -161,4 +161,4 @@ set background=dark
 colorscheme gruvbox
 
 " Show function key mappings in startup
-let g:startify_custom_header = readfile(expand('~/.config/nvim/start_message.txt'))
+let g:startify_custom_header = readfile(expand('~/.config/vim-shared/start_message.txt'))

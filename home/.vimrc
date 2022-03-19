@@ -20,7 +20,7 @@ endif
 
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'tpope/vim-sensible'
-source ~/.config/nvim/bundles-shared.vim
+source ~/.config/vim-shared/bundles-shared.vim
 
 call plug#end()
 
@@ -29,13 +29,13 @@ filetype plugin indent on
 " }
 
 " Load shared init {
-if filereadable(expand("~/.config/nvim/init-shared.vim"))
-  source ~/.config/nvim/init-shared.vim
+if filereadable(expand("~/.config/vim-shared/init-shared.vim"))
+  source ~/.config/vim-shared/init-shared.vim
 endif
 " }
 
 " Load shared mappings {
-if filereadable(expand("~/.config/nvim/mappings.vim"))
-  source ~/.config/nvim/mappings.vim
+if filereadable(expand("~/.config/vim-shared/mappings.vim"))
+  source ~/.config/vim-shared/mappings.vim
 endif
 " }
