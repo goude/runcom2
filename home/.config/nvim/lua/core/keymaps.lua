@@ -11,17 +11,17 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Change leader to a comma
-vim.g.mapleader = ','
+vim.g.mapleader = ' '
 
------------------------------------------------------------
+----------------------------------------------------------
 -- Neovim shortcuts
 -----------------------------------------------------------
 
--- Clear search highlighting with <leader> and c
-map('n', '<leader>c', ':nohl<CR>')
+-- Clear search highlighting with <leader> and l
+map('n', '<leader>l', ':nohl<CR>')
 
--- Map Esc to kk
-map('i', 'kk', '<Esc>')
+-- Map Esc to jk
+map('i', 'jk', '<Esc>')
 
 -- Don't use arrow keys
 map('', '<up>', '<nop>')
