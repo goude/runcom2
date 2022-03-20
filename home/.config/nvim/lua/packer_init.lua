@@ -85,7 +85,8 @@ return packer.startup(function()
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
 
-  use {
-    'dense-analysis/ale'
-  }
+  use 'dense-analysis/ale'
+  use 'justinmk/vim-sneak'
+  use 'tpope/vim-surround'
+
 end)
