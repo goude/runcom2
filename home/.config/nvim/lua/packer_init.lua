@@ -84,4 +84,8 @@ return packer.startup(function()
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
+
+  use {
+    'dense-analysis/ale'
+  }
 end)

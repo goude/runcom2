@@ -30,8 +30,8 @@ map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
 -- Fast saving with <leader> and s
-map('n', '<leader>s', ':w<CR>')
-map('i', '<leader>s', '<C-c>:w<CR>')
+map('n', '<C-s>', ':w<CR>')
+map('i', '<C-s>', '<C-c>:w<CR>')
 
 -- Move around splits using Ctrl + {h,j,k,l}
 map('n', '<C-h>', '<C-w>h')
