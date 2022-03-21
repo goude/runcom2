@@ -30,9 +30,11 @@ $pip_cmd install --upgrade \
   pynvim \
   pytest \
   pydocstyle \
+  pyscaffold[all] \
   reorder-python-imports \
   requests \
   tmuxp \
+  tox \
   topydo \
   vim-vint \
   visidata \
@@ -49,9 +51,11 @@ pyenv_symlinks=(
   "isort"
   "mypy"
   "pipx"
+  "putup"
   "pydocstyle"
   "reorder-python-imports"
   "tmuxp"
+  "tox"
   "topydo"
   "vd"
   "yapf"

@@ -7,9 +7,9 @@
     apt:
       pkg:
         - git
+        - fish
         - tmux
         - vim-nox
-        - neovim
         - curl
         - silversearcher-ag
         - fzf
