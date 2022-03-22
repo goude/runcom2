@@ -1,21 +1,21 @@
 ---
 - hosts:
-  - localhost
+    - localhost
   tasks:
-  - name: Install Required Packages
-    become: yes
-    apt:
-      pkg:
-        - git
-        - fish
-        - tmux
-        - vim-nox
-        - curl
-        - silversearcher-ag
-        - fzf
-        - python3-pip
-        - python3-venv
-        - libreadline-dev
-        - libsqlite3-dev
-        - libbz2-dev
-        - libffi-dev
+    - name: Install Required Packages
+      become: yes
+      apt:
+        pkg:
+          - git
+          - fish
+          - tmux
+          - vim-nox
+          - curl
+          - silversearcher-ag
+          - fzf
+          - python3-pip
+          - python3-venv
+          - libreadline-dev
+          - libsqlite3-dev
+          - libbz2-dev
+          - libffi-dev
