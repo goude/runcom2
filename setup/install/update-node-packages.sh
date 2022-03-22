@@ -2,7 +2,7 @@
 source "$HOME/.nvm/nvm.sh"
 nvm use node
 
-npm install -g npm@latest jsonlint eslint eslint-plugin-react tern neovim prettier stylelint stylelint-config-recommended yarn textlint remark-cli remark-preset-lint-recommended remark-preset-lint-markdown-style-guide
+npm install -g npm@latest jsonlint eslint eslint-plugin-react tern neovim prettier stylelint stylelint-config-recommended yarn textlint
 
 # remark-preset-lint-markdown-style-guide for hyphens instead of asterixii
 
