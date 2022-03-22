@@ -30,6 +30,8 @@ local banner = {
   " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
   " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
   "                                                    ",
+  "  Current learning goals: vim-sneak, surround.vim   ",
+  "                                                    ",
 }
 
 dashboard.section.header.val = banner

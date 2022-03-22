@@ -88,5 +88,7 @@ return packer.startup(function()
   use 'dense-analysis/ale'
   use 'justinmk/vim-sneak'
   use 'tpope/vim-surround'
+  use 'preservim/vim-pencil'
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
 end)
