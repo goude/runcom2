@@ -91,4 +91,10 @@ return packer.startup(function()
   use 'preservim/vim-pencil'
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
+  use {
+    'filipdutescu/renamer.nvim',
+    branch = 'master',
+    requires = { 'nvim-lua/plenary.nvim'}
+  }
+
 end)
