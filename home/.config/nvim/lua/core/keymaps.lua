@@ -33,11 +33,19 @@ map('', '<right>', '<nop>')
 map('n', '<C-s>', ':w<CR>')
 map('i', '<C-s>', '<C-c>:w<CR>')
 
+-- Close buffer
+map('n', '<C-q>', ':bd<CR>')
+map('i', '<C-q>', '<ESC>:bd<CR>')
+
 -- Move around splits using Ctrl + {h,j,k,l}
 map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
+--map('n', '<C-j>', '<C-w>j')
+--map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
+
+-- Move Lines
+map('n', '<C-j>', ':move+<cr>')
+map('n', '<C-k>', ':move-2<cr>')
 
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<leader>q', ':qa!<CR>')
@@ -45,6 +53,7 @@ map('n', '<leader>q', ':qa!<CR>')
 -- Switch tabs with Tab
 map('n', '<Tab>', ':bnext!<CR>')
 map('n', '<S-Tab>', ':bprev!<CR>')
+
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
