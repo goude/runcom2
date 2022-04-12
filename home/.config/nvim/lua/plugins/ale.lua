@@ -10,5 +10,6 @@ g.ale_fixers = {
   html = {'prettier'},
   css = {'prettier', 'stylelint'},
   markdown = {'prettier'},
-  javascript = {'eslint', 'prettier'}
+  javascript = {'eslint', 'prettier'},
+  typescript = {'eslint', 'prettier'}
 }
