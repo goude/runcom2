@@ -109,3 +109,8 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+-- Turn off inline diagnostic messages (they mess up the screen)
+vim.diagnostic.config({
+  virtual_text = false,
+})
