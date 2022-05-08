@@ -26,6 +26,7 @@ $pip_cmd install --upgrade \
   jedi \
   mypy \
   pipx \
+  pyscaffold[all] \
   neovim \
   pynvim \
   pytest \
@@ -36,6 +37,7 @@ $pip_cmd install --upgrade \
   tmuxp \
   tox \
   topydo \
+  tox \
   vim-vint \
   visidata \
   yamllint \
