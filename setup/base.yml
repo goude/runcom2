@@ -6,6 +6,8 @@
       become: yes
       apt:
         pkg:
+          - bat
+          - exa
           - git
           - fish
           - tmux
