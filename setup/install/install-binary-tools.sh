@@ -2,7 +2,6 @@
 set -e
 
 echo "Installing starship..."
-# curl -fsSL https://starship.rs/install.sh | bash -s -- --bin-dir="$HOME/bin"
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir="$HOME/bin"
 
 echo "Installing shfmt..."
