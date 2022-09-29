@@ -85,8 +85,17 @@ return packer.startup(function()
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+    -- you can configure Hop the way you like here; see :h hop-config
+    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
+  }
+
   use 'dense-analysis/ale'
-  use 'justinmk/vim-sneak'
+  --use 'justinmk/vim-sneak'
   use 'tpope/vim-surround'
   use 'preservim/vim-pencil'
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
@@ -97,4 +106,6 @@ return packer.startup(function()
     requires = { 'nvim-lua/plenary.nvim'}
   }
 
+  use 'preservim/nerdcommenter'
+  use 'editorconfig/editorconfig-vim'
 end)
