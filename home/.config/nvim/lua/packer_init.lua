@@ -108,4 +108,6 @@ return packer.startup(function()
 
   use 'preservim/nerdcommenter'
   use 'editorconfig/editorconfig-vim'
+
+  use 'goude/todo.txt-vim'
 end)
