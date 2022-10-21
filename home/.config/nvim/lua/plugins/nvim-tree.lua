@@ -31,7 +31,7 @@ local g = vim.g
 
 require('nvim-tree').setup {
   open_on_setup = true,
-  auto_close = false,
+  --auto_close = false,
   update_cwd = true,
   actions = {
     open_file = {
