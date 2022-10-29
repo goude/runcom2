@@ -1,3 +1,3 @@
 function ls
-exa --classify $argv
+exa --classify --icons $argv
 end
