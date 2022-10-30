@@ -33,7 +33,7 @@ alias n='nvim'
 alias k='kubectl'
 alias a='ansible'
 alias ap='ansible-playbook'
-alias mgs='mgitstatus'
+alias mgs='mgitstatus ~/repos ~/.homesick/repos'
 
 # grepping aliases
 alias esi='env | grep -i $1'
