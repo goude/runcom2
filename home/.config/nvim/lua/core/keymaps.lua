@@ -67,6 +67,9 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
 map('n', '<leader>r', ':NvimTreeRefresh<CR>')       -- refresh
 map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 
+-- Pencil
+map('n', '<leader>tp', ':TogglePencil<CR>')
+
 -- Vista tag-viewer
 map('n', '<C-m>', ':Vista!!<CR>') -- open/close
 
