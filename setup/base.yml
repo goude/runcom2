@@ -15,6 +15,7 @@
           - curl
           - silversearcher-ag
           - fzf
+          - mgitstatus
           - python3-pip
           - python3-venv
           - libreadline-dev
