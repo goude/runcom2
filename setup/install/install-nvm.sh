@@ -10,4 +10,4 @@ cd .nvm
 git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
 source ./nvm.sh
 #nvm install "$RUNCOM_NVM2_NODE_VERSION"
-nvm install 16
+nvm install 18
