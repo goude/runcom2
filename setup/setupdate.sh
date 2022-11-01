@@ -9,8 +9,8 @@ cd install
 
 ./install-homeshick.sh
 ./install-binary-tools.sh
-./install-nvm.sh
-./update-node-packages.sh
+#./install-nvm.sh
+#./update-node-packages.sh
 
 cd ..
 cd rcpy
