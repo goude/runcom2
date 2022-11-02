@@ -5,13 +5,7 @@
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
-#cd $HOME
-#git clone https://github.com/creationix/nvm.git .nvm
-#cd .nvm
-##git checkout v0.33.1
-#git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
-#source ./nvm.sh
-##nvm install "$RUNCOM_NVM2_NODE_VERSION"
-echo "FIX ME, NEED TO SOURCE CORRECTLY"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 nvm install 18
