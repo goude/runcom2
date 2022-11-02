@@ -62,9 +62,9 @@ eval "$(fasd --init auto)"
 
 # nvm (slow loading)
 #alias nvm='[ -s "$NVM_DIR/nvm.sh" ] && unalias nvm && . "$NVM_DIR/nvm.sh" && nvm $@'
-if [ -z ${NVM_RC_VERSION+x} ]; then #  if NVM... is not set
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use node
-fi
+#if [ -z ${NVM_RC_VERSION+x} ]; then #  if NVM... is not set
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use node
+#fi
 
 # Turn off Ctrl-s XOFF, so we can use C-S mapping in vim
 # Commented out pending further investigation (x key stopped working)
