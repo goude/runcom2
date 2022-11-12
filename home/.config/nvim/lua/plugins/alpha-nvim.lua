@@ -31,7 +31,7 @@ local banner = {
   " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
   "                                                    ",
   "  Current learning goals: vim-sneak, surround.vim   ",
-  "  C-n: ToggleTree, L-rn: Rename                     ",
+  "  C-n: ToggleTree, C-m: ToggleTag, L-rn: Rename     ",
 }
 
 dashboard.section.header.val = banner
