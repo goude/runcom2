@@ -11,3 +11,4 @@ rm -rf ~/.local/share/nvim
 cd ~/.config/nvim
 ~/.config/nvim/install_packer.sh
 
+echo "Hint: :TSUpdate may fix treesitter problems."
