@@ -6,7 +6,7 @@ rcfiles=$HOMESHICK_REPOS/runcom2
 system=`$rcfiles/utils/system`
 
 # Activate pyenv (existence check is performed by script)
-. "$rcfiles/rc.pyenv"
+# . "$rcfiles/rc.pyenv"
 
 # Ensure locale is set
 export LANG=en_US.UTF-8
