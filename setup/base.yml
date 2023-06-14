@@ -22,3 +22,9 @@
           - libsqlite3-dev
           - libbz2-dev
           - libffi-dev
+          - tig
+          - tldr
+          - fd-find
+          - ripgrep
+          - duf
+          - aiksaurus
