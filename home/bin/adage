@@ -1,7 +1,6 @@
 #!/usr/bin/env python2
 from __future__ import print_function
 
-import cPickle as pickle
 import os
 import random
 import re
@@ -9,6 +8,8 @@ import sys
 from glob import glob
 from optparse import IndentedHelpFormatter, OptionParser
 from time import sleep
+
+import cPickle as pickle
 
 ############################################################################
 #    Copyright (C) 2008 by Michael Goerz                                   #
