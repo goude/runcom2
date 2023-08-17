@@ -18,6 +18,7 @@ $pip_cmd install --upgrade pip wheel
 $pip_cmd install --upgrade \
   autopep8 \
   black \
+  click \
   docker-compose \
   flake8 \
   httpie \
