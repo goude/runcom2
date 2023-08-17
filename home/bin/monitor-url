@@ -1,0 +1,46 @@
+#!/home/mind/bin/neovim-python3
+import time
+
+import click
+import requests
+
+
+def get_url_content(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        click.echo(f"Error fetching URL content: {e}", err=True)
+        return None
+
+
+@click.command()
+@click.argument("url")
+def main(url):
+    """
+    Monitor the specified URL for content changes and exit when a change is detected.
+    """
+    initial_content = get_url_content(url)
+
+    if initial_content is None:
+        click.echo("Initial fetch failed. Exiting.", err=True)
+        return
+
+    click.echo(f"Monitoring {url} for changes...")
+
+    while True:
+        time.sleep(10)  # Wait for 10 seconds before checking again
+        current_content = get_url_content(url)
+
+        if current_content is None:
+            click.echo("Error fetching URL content. Retrying...", err=True)
+            continue
+
+        if current_content != initial_content:
+            click.echo("URL content has changed!")
+            break
+
+
+if __name__ == "__main__":
+    main()
