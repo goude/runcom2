@@ -1,10 +1,21 @@
 #!/bin/bash
 
-# Check arguments
-if [[ $# -lt 1 ]]; then
-  echo "Usage: $0 [-c|--comment|-u|--uncomment] <filename>"
+usage() {
+  echo "Usage: $0 [OPTION] <filename>"
+  echo ""
+  echo "Toggle, comment, or uncomment lines in a file."
+  echo ""
+  echo "Options:"
+  echo "  -c, --comment      Comment lines in the specified file."
+  echo "  -u, --uncomment    Uncomment lines in the specified file."
+  echo "  -h, --help         Display this help message and exit."
+  echo ""
+  echo "If no option is specified, the script will check the second line of the file."
+  echo "If it begins with a comment (with optional leading spaces),"
+  echo "the file is assumed to be commented throughout and will be uncommented."
+  echo "Otherwise, it will be commented."
   exit 1
-fi
+}
 
 action="toggle"
 file=""
@@ -20,6 +31,9 @@ while [[ $# -gt 0 ]]; do
       action="uncomment"
       shift
       ;;
+    -h|--help)
+      usage
+      ;;
     *)
       # Assume this is the filename if not recognized as an option
       file=$1
@@ -27,6 +41,11 @@ while [[ $# -gt 0 ]]; do
       ;;
   esac
 done
+
+# Display help if no filename is provided
+if [[ -z $file ]]; then
+    usage
+fi
 
 # If action is "toggle", check the second line of the file
 if [[ $action == "toggle" ]]; then
