@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Check arguments
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $0 [-c|--comment|-u|--uncomment] <filename>"
+  exit 1
+fi
+
+action="toggle"
+file=""
+
+# Process the options
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -c|--comment)
+      action="comment"
+      shift
+      ;;
+    -u|--uncomment)
+      action="uncomment"
+      shift
+      ;;
+    *)
+      # Assume this is the filename if not recognized as an option
+      file=$1
+      shift
+      ;;
+  esac
+done
+
+# If action is "toggle", check the second line of the file
+if [[ $action == "toggle" ]]; then
+  # Check if the second line is commented (has leading optional spaces followed by #)
+  if sed -n '2p' "$file" | grep -q "^[[:space:]]*#"; then
+    action="uncomment"
+  else
+    action="comment"
+  fi
+fi
+
+# Apply the desired action
+case $action in
+  comment)
+    # This will comment lines that aren't already commented
+    sed -i '/^[[:space:]]*[^#[:space:]]/s/^\([[:space:]]*\)/\1#/' "$file"
+    ;;
+  uncomment)
+    # This will uncomment lines that are commented while maintaining leading spaces
+    sed -i 's/^\([[:space:]]*\)#/\1/' "$file"
+    ;;
+esac
+
