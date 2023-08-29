@@ -12,5 +12,6 @@ g.ale_fixers = {
   markdown = {'prettier'},
   javascript = {'eslint', 'prettier'},
   typescript = {'eslint', 'prettier'},
-  rust = {'rustfmt'}
+  rust = {'rustfmt'},
+  r = {'styler'}
 }
