@@ -21,7 +21,7 @@ def get_url_content(url: str) -> str:
         response.raise_for_status()
         return response.text
     except requests.RequestException as e:
-        click.echo(f"Error fetching URL content: {e}", err=True)
+        # click.echo(f"Error fetching URL content: {e}", err=True)
         return None
 
 
