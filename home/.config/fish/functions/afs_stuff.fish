@@ -10,7 +10,9 @@ function afs_stuff --on-variable PWD --description 'Do afs stuff'
     batcat todo.txt
   end
 
-  echo
-  adage
-  echo
+  if test -e notes.md
+    echo
+    adage
+    echo
+  end
 end
