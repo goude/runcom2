@@ -23,7 +23,7 @@ return packer.startup(function()
   use 'kyazdani42/nvim-tree.lua'
 
   -- Indent line
-  use 'lukas-reineke/indent-blankline.nvim'
+  --use 'lukas-reineke/indent-blankline.nvim'
 
   -- Autopair
   use {

@@ -9,7 +9,7 @@ wget https://github.com/neovim/neovim/releases/download/v0.9.1/nvim-linux64.tar.
 tar xvzf nvim-linux64.tar.gz
 
 rm nvim-linux64.tar.gz
-rm ~/bin/nvim
+rm -f ~/bin/nvim
 rm -rf ~/.local/share/nvim
 
 ln -s ~/.nvim/nvim-linux64/bin/nvim ~/bin/
