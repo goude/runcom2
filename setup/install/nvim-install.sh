@@ -5,7 +5,7 @@ mkdir -p ~/.nvim/
 rm -rf ~/.nvim/nvim-linux64
 cd ~/.nvim/
 
-wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz
 tar xvzf nvim-linux64.tar.gz
 
 rm nvim-linux64.tar.gz
