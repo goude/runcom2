@@ -5,7 +5,8 @@ if status --is-interactive
     fish_vi_key_bindings
     theme_gruvbox dark medium
 
-    starship init fish | source
+    #starship init fish | source
+    starship init fish --print-full-init | sed 's/"$(commandline)"/(commandline | string collect)/' | source
 
     source $HOMESHICK_REPOS/homeshick/homeshick.fish
     source $HOMESHICK_REPOS/homeshick/completions/homeshick.fish
@@ -17,4 +18,4 @@ if status --is-interactive
     load_em
 end
 
-set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
+set -g fish_user_paths /usr/local/opt/openjdk/bin $fish_user_paths
