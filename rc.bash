@@ -25,6 +25,3 @@ fi
 
 # Deduplicate PATH
 dedup_pathvar PATH
-
-# fzf
-#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
