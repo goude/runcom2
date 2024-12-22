@@ -46,5 +46,3 @@ alias tlk='tmux kill-session -a && tmux kill-server'
 
 # misc aliases
 alias serve-directory='python3 -m http.server'
-alias lsl='lzt list'
-alias lse='lzt edit'
