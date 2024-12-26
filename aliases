@@ -44,5 +44,12 @@ alias ta='tmux attach || tmux new'
 alias clp='tmux split-window && exit'
 alias tlk='tmux kill-session -a && tmux kill-server'
 
+# lzt aliases
+alias lzl='lzt list'
+alias lze='lzt edit'
+alias lzr='lzt review'
+alias adage='lzt adage'
+alias fortune='lzt adage'
+
 # misc aliases
 alias serve-directory='python3 -m http.server'

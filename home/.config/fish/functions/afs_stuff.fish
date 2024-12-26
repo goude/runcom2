@@ -13,6 +13,5 @@ function afs_stuff --on-variable PWD --description 'Do afs stuff'
     if test -e notes.md
         echo
         lzt adage
-        echo
     end
 end
