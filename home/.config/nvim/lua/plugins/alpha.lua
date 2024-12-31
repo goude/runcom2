@@ -12,7 +12,7 @@ return {
          ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z
          ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║
          ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝
-         YO PRESS THE SPACEBAR YO
+         YO PRESS THE SPACEBAR YO :WhichKey IS USEFUL YO
     ]]
 
     dashboard.section.header.val = vim.split(logo, "\n")
