@@ -48,6 +48,7 @@ alias tlk='tmux kill-session -a && tmux kill-server'
 alias lzl='lzt list'
 alias lze='lzt edit'
 alias lzr='lzt review'
+alias l='lzt'
 alias adage='lzt adage'
 alias fortune='lzt adage'
 
