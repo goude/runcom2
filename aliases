@@ -55,3 +55,4 @@ alias fortune='lzt adage'
 # misc aliases
 alias serve-directory='python3 -m http.server'
 alias sud='save "minor edit/housekeeping activity"'
+alias rgi='rg -i'
