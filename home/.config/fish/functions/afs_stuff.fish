@@ -3,11 +3,11 @@ function afs_stuff --on-variable PWD --description 'Do afs stuff'
 
     if test -e notes.md
         # bat --language="md" --style="plain" notes.md
-        batcat notes.md
+        bat notes.md
     end
 
     if test -e todo.txt
-        batcat todo.txt
+        bat todo.txt
     end
 
     if test -e notes.md
