@@ -1,4 +1,4 @@
-export HOMESHICK_REPOS=$HOME/.homesick/repos
+set -x HOMESHICK_REPOS $HOME/.homesick/repos
 source $HOMESHICK_REPOS/runcom2/localenv
 
 if status --is-interactive
@@ -18,4 +18,4 @@ if status --is-interactive
     load_em
 end
 
-set -g fish_user_paths /usr/local/opt/openjdk/bin $fish_user_paths
+#set -g fish_user_paths /usr/local/opt/openjdk/bin $fish_user_paths
