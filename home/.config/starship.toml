@@ -15,6 +15,12 @@ disabled = true
 command = "git config user.email"
 when = "git status"
 
+[custom.disk_space]
+command = "df -h /System/Volumes/Data/ | awk 'NR==2 {print $5}'"
+when = "true"
+format = "💾[$output]($style) "
+style = "bold green"
+
 #[custom.ssh_no_keys]
 #description = "SSH missing keys"
 #when = "ssh-add -l | grep -q 'no identities'"
