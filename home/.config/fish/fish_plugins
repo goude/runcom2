@@ -3,3 +3,6 @@ edc/bass
 brigand/fast-nvm-fish
 evanlucas/fish-kubectl-completions
 jethrokuan/z
+jethrokuan/fzf
+danhper/fish-ssh-agent
+jorgebucaran/autopair.fish
