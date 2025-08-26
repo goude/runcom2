@@ -1,13 +1,5 @@
 add_newline = false
 
-#[character]
-#symbol = ""
-#symbol = ""
-#symbol = "➜"
-
-#[python]
-#scan_for_pyfiles = false
-
 [kubernetes]
 disabled = true
 
@@ -18,30 +10,5 @@ when = "git status"
 [custom.disk_space]
 command = "df -h /System/Volumes/Data/ | awk 'NR==2 {print $5}'"
 when = "true"
-format = "💾[$output]($style) "
+format = "💾 [$output]($style) "
 style = "bold green"
-
-#[custom.ssh_no_keys]
-#description = "SSH missing keys"
-#when = "ssh-add -l | grep -q 'no identities'"
-#command = "echo 🚫"
-#format = "$symbol[$output]($style) "
-#shell = ["bash", "--noprofile", "--norc"]
-#symbol = "🔑"
-#style = "bold fg:red"
-
-#[custom.ssh_keys]
-#description = "SSH key count"
-#when = "ssh-add -l | grep -v -q 'no identities'"
-#command = "ssh-add -l | grep -v 'no identities' | wc -l"
-#format = "$symbol[$output]($style) "
-#shell = ["bash", "--noprofile", "--norc"]
-#symbol = "🔑"
-#style = "bold fg:green"
-
-#[custom.sudo]
-#description = "valid sudo timestamp marker"
-#command = "echo -n '!'"
-#format = "[$symbol$output]($style) "
-#style = "bold fg:bright-red"
-#when = "sudo -vn &>/dev/null"
